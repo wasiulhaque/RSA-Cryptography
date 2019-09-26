@@ -34,7 +34,7 @@ void main()
         }
     }
     crypto(e,d,N);
-    //printf("The possible values for p and q are\n p= %d, q= %d",e,d);
+    //printf("The possible values for e and d are\n p= %d, q= %d",e,d);
 }
 
 void crypto(int e, int d, int N)
