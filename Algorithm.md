@@ -8,4 +8,4 @@ RSA (Rivest–Shamir–Adleman) is one of the first public-key cryptosystems and
        5. Choose 'd', where d is the modular inverse of "e mod Q(N)
 
 Now, While encrypting, Enc = p^e mod N, where 'p' is the positional value of the alphabet in the actual message
-And while decrypting, Dec = p'^d mod N, where 'p'' is the positional value of the aplhabet in the encrypted message
+And while decrypting,  Dec = p'^d mod N, where 'p'' is the positional value of the aplhabet in the encrypted message
