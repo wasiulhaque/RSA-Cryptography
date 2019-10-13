@@ -2,6 +2,14 @@
 #include<ctype.h>
 #include<stdlib.h>
 #include<string.h>
+#include<math.h>
+int power(int p,int n)
+{
+    int i=1,mul=1;
+    while(i<n){
+        mul=mul*n;
+    }
+}
 int gcd(int a, int b)
 {
 
@@ -24,17 +32,20 @@ void main()
     scanf("%d",&q);
     N=p*q;
     Q=(p-1)*(q-1);
-    for(e=2;e<Q;e++){
+    for(e=2; e<Q; e++)
+    {
         if(gcd(e,Q)==1)
             break;
     }
-    for(d=rand()%100000;;d++){
-        if(d!=1 && (d*e)%Q==1){
+    for(d=rand()%15;; d++)
+    {
+        if(d!=1 && (d*e)%Q==1)
+        {
             break;
         }
     }
+    printf("The possible values for p and q are\n p= %d, q= %d\n",e,d);
     crypto(e,d,N);
-    //printf("The possible values for p and q are\n p= %d, q= %d",e,d);
 }
 
 void crypto(int e, int d, int N)
@@ -45,13 +56,16 @@ void crypto(int e, int d, int N)
     fflush(stdin);
     gets(a);
     printf("Your decrypted message will be:\n");
-    for(i=0;i<strlen(a);i++){
-        if(a[i]>='A' && a[i]<='Z'){
-          p=a[i]-'A';
-          p=(int)(pow(p,e))%N;
-          printf("%c",p+'A');
+    for(i=0; i<strlen(a); i++)
+    {
+        if(a[i]>='A' && a[i]<='Z')
+        {
+            p=a[i]-'A';
+            p=(int)(pow(p,e))%N;
+            printf("%c",p+'A');
         }
-        else if(a[i]>='a' && a[i]<='z'){
+        else if(a[i]>='a' && a[i]<='z')
+        {
             p=(int) (pow((a[i]-'a'),e))%N;
             printf("%c",p+'a');
         }
@@ -59,4 +73,3 @@ void crypto(int e, int d, int N)
             printf("%c",a[i]);
     }
 }
-
