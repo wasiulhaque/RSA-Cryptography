@@ -37,14 +37,14 @@ void main()
         if(gcd(e,Q)==1)
             break;
     }
-    for(d=rand()%15;; d++)
+    for(d=rand()%100000;; d++)
     {
         if(d!=1 && (d*e)%Q==1)
         {
             break;
         }
     }
-    printf("The possible values for p and q are\n p= %d, q= %d\n",e,d);
+    printf("The possible values for e and d are\n p= %d, q= %d\n",e,d);
     crypto(e,d,N);
 }
 
