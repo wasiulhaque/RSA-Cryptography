@@ -61,12 +61,12 @@ void crypto(int e, int d, int N)
         if(a[i]>='A' && a[i]<='Z')
         {
             p=a[i]-'A';
-            p=(int)(pow(p,e))%N;
+            p=(int)(pow(p,d))%N;
             printf("%c",p+'A');
         }
         else if(a[i]>='a' && a[i]<='z')
         {
-            p=(int) (pow((a[i]-'a'),e))%N;
+            p=(int) (pow((a[i]-'a'),d))%N;
             printf("%c",p+'a');
         }
         else
